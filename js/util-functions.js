@@ -23,15 +23,12 @@ function decodeBase64(i) {
 
 function encodeUrl(i) {
     var input = document.getElementById("input-text-area-" + i).value;
-    var x = encodeURI(input);
+    var x = encodeURIComponent(input);
     document.getElementById("text-area-" + i).textContent = x;
 }
 
 function decodeUrl(i) {
     var input = document.getElementById("input-text-area-" + i).value;
-    var x = decodeURI(input);
+    var x = decodeURIComponent(input);
     document.getElementById("text-area-" + i).textContent = x;
 }
-
-
-
