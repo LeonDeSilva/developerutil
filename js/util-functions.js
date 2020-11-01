@@ -21,4 +21,17 @@ function decodeBase64(i) {
     document.getElementById("text-area-" + i).textContent = x;
 }
 
+function encodeUrl(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var x = encodeURI(input);
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function decodeUrl(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var x = decodeURI(input);
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+
 
