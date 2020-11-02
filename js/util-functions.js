@@ -70,3 +70,21 @@ function decodeHex(i) {
     var x = fromHex(input);
     document.getElementById("text-area-" + i).textContent = x;
 }
+
+function hashMd5(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var x = CryptoJS.MD5(input).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function hashSha1(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var x = CryptoJS.SHA1(input).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function hashSha256(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var x = CryptoJS.SHA256(input).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
