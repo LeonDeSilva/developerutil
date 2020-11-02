@@ -29,6 +29,17 @@ function fromHex(h) {
     return decodeURIComponent(escape(s))
 }
 
+function toStringUnescape(input) {
+    return input.replaceAll("\\\\", "\\")
+                .replaceAll("\\\"", "\"")
+                .replaceAll("\\t", "\t")
+                .replaceAll("\\r\\n", "\r\n")
+                .replaceAll("\\r", "\r")
+                .replaceAll("\\n", "\n")
+                .replaceAll("\\f", "")
+                .replaceAll("\\b", "");
+  }
+
 // Util Functions
 function generateGuid(i) {
     var x = generateGuid2();
@@ -86,5 +97,17 @@ function hashSha1(i) {
 function hashSha256(i) {
     var input = document.getElementById("input-text-area-" + i).value;
     var x = CryptoJS.SHA256(input).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function stringEscape(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var x = JSON.stringify(input).slice(1, -1);
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function stringUnescape(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var x = toStringUnescape(input);
     document.getElementById("text-area-" + i).textContent = x;
 }
