@@ -10,6 +10,10 @@ body {
     background-color: rgb(53, 53, 53);
 }
 
+.navbar-toggler-icon {
+    color: aliceblue;
+}
+
 .dropdown-menu {
     background-color: rgb(53, 53, 53);
 }
