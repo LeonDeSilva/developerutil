@@ -38,6 +38,7 @@ body {
 .card {
     background-color: rgb(80, 80, 80);
     color: aliceblue;
+    overflow: hidden;
 }
 
 .btn-primary {
@@ -71,4 +72,9 @@ body {
 
 .close:hover {
     color: gold;
+}
+
+.file-input {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
 }

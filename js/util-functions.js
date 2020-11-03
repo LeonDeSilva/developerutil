@@ -7,7 +7,7 @@ function generateGuid2() {
 
 function fixedEncodeURIComponent(str) {
     return encodeURIComponent(str).replace(/[!'()*]/g, (c) => {
-      return '%' + c.charCodeAt(0).toString(16)
+        return '%' + c.charCodeAt(0).toString(16)
     })
 }
 
@@ -23,7 +23,7 @@ function toHex(s) {
 
 function fromHex(h) {
     var s = ''
-    for (var i = 0; i < h.length; i+=2) {
+    for (var i = 0; i < h.length; i += 2) {
         s += String.fromCharCode(parseInt(h.substr(i, 2), 16))
     }
     return decodeURIComponent(escape(s))
@@ -31,14 +31,30 @@ function fromHex(h) {
 
 function toStringUnescape(input) {
     return input.replaceAll("\\\\", "\\")
-                .replaceAll("\\\"", "\"")
-                .replaceAll("\\t", "\t")
-                .replaceAll("\\r\\n", "\r\n")
-                .replaceAll("\\r", "\r")
-                .replaceAll("\\n", "\n")
-                .replaceAll("\\f", "")
-                .replaceAll("\\b", "");
-  }
+        .replaceAll("\\\"", "\"")
+        .replaceAll("\\t", "\t")
+        .replaceAll("\\r\\n", "\r\n")
+        .replaceAll("\\r", "\r")
+        .replaceAll("\\n", "\n")
+        .replaceAll("\\f", "")
+        .replaceAll("\\b", "");
+}
+
+function readSingleFile(e, i) {
+    var file = e.target.files[0];
+    if (!file) {
+      return;
+    }
+    
+    var reader = new FileReader();
+    reader.readAsBinaryString(file, "UTF-8");
+    reader.onload = function (evt) {
+        document.getElementById("file-content-" + i).innerHTML = window.btoa(evt.target.result);
+    }
+    reader.onerror = function (evt) {
+        document.getElementById("file-content-" + i).innerHTML = "";
+    }
+}
 
 // Util Functions
 function generateGuid(i) {
@@ -56,6 +72,11 @@ function decodeBase64(i) {
     var input = document.getElementById("input-text-area-" + i).value;
     var x = window.atob(input);
     document.getElementById("text-area-" + i).textContent = x;
+}
+
+function encodeBase64File(i) {
+    var input = document.getElementById("file-content-" + i).innerHTML;
+    document.getElementById("text-area-" + i).textContent = input;
 }
 
 function encodeUrl(i) {
