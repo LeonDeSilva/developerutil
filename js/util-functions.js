@@ -156,3 +156,17 @@ function stringUnescape(i) {
     var x = toStringUnescape(input);
     document.getElementById("text-area-" + i).textContent = x;
 }
+
+function generateQR(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var qrdiv = document.getElementById("qrcode-" + i);
+    qrdiv.innerHTML = "";
+    var qrcode = new QRCode(document.getElementById("qrcode-" + i), {
+        text: input,
+        width: 160,
+        height: 160,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+}

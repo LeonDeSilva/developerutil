@@ -78,3 +78,8 @@ body {
     font-size: 0.8rem;
     margin-bottom: 5px;
 }
+
+.qr-code {
+    margin-top: 10px;
+    float: right;
+}
