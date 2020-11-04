@@ -115,9 +115,33 @@ function hashSha1(i) {
     document.getElementById("text-area-" + i).textContent = x;
 }
 
+function hashSha3(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var x = CryptoJS.SHA3(input).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function hashSha224(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var x = CryptoJS.SHA224(input).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
 function hashSha256(i) {
     var input = document.getElementById("input-text-area-" + i).value;
     var x = CryptoJS.SHA256(input).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function hashSha384(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var x = CryptoJS.SHA384(input).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function hashSha512(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var x = CryptoJS.SHA512(input).toString();
     document.getElementById("text-area-" + i).textContent = x;
 }
 
