@@ -33,6 +33,7 @@ body {
 
 .nav-pin-text {
     color: rgb(230, 70, 70);
+    cursor: pointer;
 }
 
 .card {
