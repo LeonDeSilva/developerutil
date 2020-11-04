@@ -83,20 +83,35 @@
             Hashing
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown-hashing">
-            <a class="dropdown-item nav-link-menu-item " href="#" onclick="addCard2('MD5 Hash', 'Hash', 'hashMd5')">MD5
-              Hash</a>
+            <a class="dropdown-item nav-link-menu-item " href="#" 
+              onclick="addCard2('MD5 Hash', 'Hash', 'hashMd5')">MD5</a>
             <a class="dropdown-item nav-link-menu-item " href="#"
-              onclick="addCard2('SHA1 Hash', 'Hash', 'hashSha1')">SHA1 Hash</a>
+              onclick="addCard2('SHA1 Hash', 'Hash', 'hashSha1')">SHA1</a>
               <a class="dropdown-item nav-link-menu-item " href="#"
-              onclick="addCard2('SHA3 Hash', 'Hash', 'hashSha3')">SHA3 Hash</a>
+              onclick="addCard2('SHA3 Hash', 'Hash', 'hashSha3')">SHA3</a>
             <a class="dropdown-item nav-link-menu-item " href="#"
-              onclick="addCard2('SHA224 Hash', 'Hash', 'hashSha224')">SHA224 Hash</a>
+              onclick="addCard2('SHA224 Hash', 'Hash', 'hashSha224')">SHA224</a>
             <a class="dropdown-item nav-link-menu-item " href="#"
-              onclick="addCard2('SHA256 Hash', 'Hash', 'hashSha256')">SHA256 Hash</a>  
+              onclick="addCard2('SHA256 Hash', 'Hash', 'hashSha256')">SHA256</a>  
             <a class="dropdown-item nav-link-menu-item " href="#"
-              onclick="addCard2('SHA384 Hash', 'Hash', 'hashSha384')">SHA384 Hash</a> 
+              onclick="addCard2('SHA384 Hash', 'Hash', 'hashSha384')">SHA384</a> 
             <a class="dropdown-item nav-link-menu-item " href="#"
-              onclick="addCard2('SHA512 Hash', 'Hash', 'hashSha512')">SHA512 Hash</a>      
+              onclick="addCard2('SHA512 Hash', 'Hash', 'hashSha512')">SHA512</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item nav-link-menu-item " href="#" 
+              onclick="addCard5('HMAC MD5 Hash', 'Hash', 'hashHmacMd5')">HMAC MD5</a>
+            <a class="dropdown-item nav-link-menu-item " href="#"
+            onclick="addCard5('HMAC SHA1 Hash', 'Hash', 'hashHmacSha1')">HMAC SHA1</a>
+            <a class="dropdown-item nav-link-menu-item " href="#"
+            onclick="addCard5('HMAC SHA3 Hash', 'Hash', 'hashHmacSha3')">HMAC SHA3</a>
+           <a class="dropdown-item nav-link-menu-item " href="#"
+              onclick="addCard5('HMAC SHA224 Hash', 'Hash', 'hashHmacSha224')">HMAC SHA224</a>
+            <a class="dropdown-item nav-link-menu-item " href="#"
+              onclick="addCard5('HMAC SHA256 Hash', 'Hash', 'hashHmacSha256')">HMAC SHA256</a>  
+            <a class="dropdown-item nav-link-menu-item " href="#"
+              onclick="addCard5('HMAC SHA384 Hash', 'Hash', 'hashHmacSha384')">HMAC SHA384</a> 
+            <a class="dropdown-item nav-link-menu-item " href="#"
+              onclick="addCard5('HMAC SHA512 Hash', 'Hash', 'hashHmacSha512')">HMAC SHA512</a>         
           </div>
         </li>
 
@@ -145,6 +160,15 @@
   <script src="js/crypto-js/sha512.js"></script>
   <script src="js/crypto-js/sha224.js"></script>
   <script src="js/crypto-js/sha384.js"></script>
+
+  <script src="js/crypto-js/hmac.js"></script>
+  <script src="js/crypto-js/hmac-md5.js"></script>
+  <script src="js/crypto-js/hmac-sha1.js"></script>
+  <script src="js/crypto-js/hmac-sha3.js"></script>
+  <script src="js/crypto-js/hmac-sha256.js"></script>
+  <script src="js/crypto-js/hmac-sha512.js"></script>
+  <script src="js/crypto-js/hmac-sha224.js"></script>
+  <script src="js/crypto-js/hmac-sha384.js"></script>
   
   <script src="js/qrcode.js"></script>
 

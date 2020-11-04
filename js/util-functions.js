@@ -145,6 +145,55 @@ function hashSha512(i) {
     document.getElementById("text-area-" + i).textContent = x;
 }
 
+function hashHmacMd5(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var key = document.getElementById("input-key-text-area-" + i).value;
+    var x = CryptoJS.HmacMD5(input, key).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function hashHmacSha1(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var key = document.getElementById("input-key-text-area-" + i).value;
+    var x = CryptoJS.HmacSHA1(input, key).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function hashHmacSha3(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var key = document.getElementById("input-key-text-area-" + i).value;
+    var x = CryptoJS.HmacSHA3(input, key).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function hashHmacSha224(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var key = document.getElementById("input-key-text-area-" + i).value;
+    var x = CryptoJS.HmacSHA224(input, key).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function hashHmacSha256(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var key = document.getElementById("input-key-text-area-" + i).value;
+    var x = CryptoJS.HmacSHA256(input, key).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function hashHmacSha384(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var key = document.getElementById("input-key-text-area-" + i).value;
+    var x = CryptoJS.HmacSHA384(input, key).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
+function hashHmacSha512(i) {
+    var input = document.getElementById("input-text-area-" + i).value;
+    var key = document.getElementById("input-key-text-area-" + i).value;
+    var x = CryptoJS.HmacSHA512(input, key).toString();
+    document.getElementById("text-area-" + i).textContent = x;
+}
+
 function stringEscape(i) {
     var input = document.getElementById("input-text-area-" + i).value;
     var x = JSON.stringify(input).slice(1, -1);
