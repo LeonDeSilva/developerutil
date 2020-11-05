@@ -124,3 +124,9 @@ body {
 .page-footer {
     color: aliceblue;
 }
+
+#du-like-btn {
+    position: absolute;; 
+    right: 0.1%; 
+    top: 8%;
+}
