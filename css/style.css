@@ -84,3 +84,39 @@ body {
     margin-top: 10px;
     float: right;
 }
+
+#intro-div {
+    color: aliceblue;
+    background-color: transparent;
+    width: 100%;
+}
+
+#intro-div-sub {
+    width: 50%;
+    background-color: rgb(80, 80, 80);
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#intro-div-sub>h5 {
+    font-weight: normal;
+    color: rgb(210, 210, 210);
+}
+
+.close-intro-btn {
+    float:right;
+    background-color: transparent;
+    font-size: 4rem;
+    color: gold;
+    padding: 0px;
+    line-height: 50px;
+}
+
+.close-intro-btn:hover {
+    float:right;
+    background-color: transparent;
+    font-size: 4rem;
+    color: goldenrod;
+    text-decoration: none;
+}

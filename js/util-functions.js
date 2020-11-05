@@ -56,6 +56,10 @@ function readSingleFile(e, i) {
     }
 }
 
+function closeIntro() {
+    document.getElementById("intro-div").style.visibility = "hidden";
+}
+
 // Util Functions
 function generateGuid(i) {
     var x = generateGuid2();
