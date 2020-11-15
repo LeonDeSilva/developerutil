@@ -127,6 +127,25 @@ body {
 
 #du-like-btn {
     position: absolute;; 
-    right: 0.1%; 
+    right: 0.3%; 
     top: 8%;
 }
+
+
+@media (max-width:768px) { 
+    #welcome-msg {
+        font-size: 1.2rem;
+    }
+
+    .msg-heading {
+        font-size: 1.2rem;
+    }
+
+    .welcome-msg-desc {
+        font-size: 1rem;
+    }
+
+    .close-intro-btn {
+        font-size: 2rem;
+    }
+  }
