@@ -148,4 +148,8 @@ body {
     .close-intro-btn {
         font-size: 2rem;
     }
+
+    #intro-div {
+        margin-top: 5rem;
+    }
   }
